@@ -1,0 +1,723 @@
+@charset "utf-8";
+
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+* {margin: 0;padding: 0;}
+
+body{
+    font-family: 'pretendard', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.4;
+    word-break: keep-all;
+    -ms-word-break: keep-all;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* //reset */
+
+
+
+/* 변수 선언  */
+:root {
+    --title-color: #231815;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #999;
+    --primary-color: #DB1B26;
+}
+
+/* common 영역  */
+.inner {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 150px 0;
+}
+
+.subtitle{
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.title{
+    margin-bottom: 40px;
+    font-size: 46px;
+    font-weight: 700;
+    color: var(--title-color);
+}
+.desc{
+    font-size: 18px;
+    color: #333;
+}
+.text-box{
+    padding-bottom: 100px;
+}
+.cont-wrap{
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.t_box .t1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+.t_box .t2 {
+    font-size: 16px;
+    color: var(--white-color);
+    transition: all 0.5s;
+}
+
+.more {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+.more img {
+    width: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -2px;
+    transition: transform 0.5s ease-out;
+}
+a:hover .t_box .more img {
+    transform: rotate(90deg);
+}
+a:hover > img{
+    transform: scale(1.1);
+}
+a > img {
+    display: block;
+    transition: 1s;
+}
+.title-wrap{
+    width: 470px;
+    padding-top: 50px;
+}
+.img-wrap{}
+.img-wrap ul{
+    display: flex;
+    gap: 0px 40px;
+    width: 960px;
+}
+.img-wrap ul li{
+    width: calc(50% - 20px);
+    border-radius: 20px 20px 60px 20px;
+    overflow: hidden;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+}
+.tov {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+
+
+/* kv 영역  */
+.kv-sec {
+    background-image: url("../images/main_01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0 0 0 / 10%); 
+}
+.kv-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+}
+.kv-title {
+    font-size: 70px;
+    margin: 30px 0px 50px;
+    font-weight: 700;
+}
+.kv-desc {
+    font-size: 20px;
+    font-weight: 300;
+}
+.kv-text {
+    max-width: 800px;
+}
+
+.paging-box{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 100px;
+}
+.paging-bar{
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 50px;
+    height: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.paging-bar:hover{
+    background-color: var(--white-color);
+}
+.play{
+    color: var(--white-color);
+}
+
+
+
+/* company 영역  */
+
+.company-sec{}
+.company-sec .title-wrap{
+    width: 100%;
+}
+.company-sec .title{
+    margin-bottom: 0px;
+}
+.company-sec .text-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.company-sec .text-box::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -40px;
+    left: 50%;
+    width: 100%;
+    height: 108px;
+    background: url(../images/sect2_water.png) no-repeat center center / cover;
+    transform: translate(-50%, 0px);
+}
+
+.company-sec ul {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    border-radius: 20px 0;
+    overflow: hidden;
+}
+.company-sec ul li{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
+.company-sec ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.company-sec ul li a > img{
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+.company-sec ul li a::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    -webkit-transform-origin-y: bottom;
+    -ms-transform-origin-y: bottom;
+    -o-transform-origin-y: bottom;
+    transition: 0.5s;
+    background-color: rgba(219, 27, 38, 0.8);
+}
+.company-sec  ul li a .t_box {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.company-sec ul li a .t_box .t1 {
+    margin-bottom: 40px;
+}
+.company-sec ul li a .t_box .t2 {
+    height: 0px;
+    opacity: 0;
+    margin-bottom: 0px;
+}
+.company-sec ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 250px;
+    /* background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%); */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+.company-sec ul li a:hover{
+}
+.company-sec ul li a:hover::before{
+    transform: scaleY(1);
+}
+.company-sec ul li a:hover .t_box .t2{
+    height: 92px; 
+    opacity: 1; 
+    margin-bottom: 120px;
+}
+
+
+/* business 영역  */
+.business-sec{
+    background-color: #f1f4ff;
+    position: relative;
+    padding: 50px 0 0 0;
+}
+.business-sec::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 100%;
+    max-width: 100%;
+    height: 132px;
+    background: url(../images/sect3_water.png) no-repeat center / cover;
+    transform: translateX(-50%);
+}
+
+.business-sec .img-wrap ul li a{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.business-sec .img-wrap ul li a::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+.business-sec .img-wrap ul li a .t_box{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 50px;
+}
+.business-sec .img-wrap ul li a .t_box .t2, 
+.business-sec .img-wrap ul li a .t_box .more{
+    opacity: 0;
+    height: 0;
+    transition: all 0.7s;
+}
+.business-sec .img-wrap ul li a:hover{}
+.business-sec .img-wrap ul li a:hover .t2,
+.business-sec .img-wrap ul li a:hover .t_box .more{
+    opacity: 1;
+    height: 20px;
+}
+
+.business-sec .img-wrap ul li a:hover .t2{
+    margin: 20px 0px 80px;
+}
+
+/* ir 영역  */
+.ir-sec{
+    padding: 150px 0 250px;
+}
+.ir-sec .img-wrap{}
+.ir-sec .img-wrap ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 40px;
+    width: 960px;
+}
+.ir-sec .img-wrap ul li{
+    border: solid 1px #ddd;
+    border-radius: 20px 0px;
+    overflow: hidden;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+.ir-sec .img-wrap ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background: url(../images/sect4_water.png) no-repeat bottom right / auto;
+    box-sizing: border-box;
+}
+.ir-sec .img-wrap ul li a img{
+    width: auto;
+    height: auto;
+}
+.ir-sec .t_box .t1{
+    margin: 20px 0px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black-color);
+}
+.ir-sec .t_box .t2{
+    font-size: 18px;
+    color: var(--title-color);
+    margin-bottom: 30px;
+}
+.ir-sec .t_box .more{
+    color: var(--title-color);
+}
+
+.ir-sec .img-wrap ul li:hover a::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0px;
+    box-shadow: 0 0 0 3px inset var(--primary-color) !important;
+    border: 1px solid var(--primary-color);
+    box-sizing: border-box;
+}
+.ir-sec .img-wrap ul li:hover .more{
+    color: var(--primary-color);
+}
+.ir-sec .img-wrap ul li .more::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-left: 10px;
+    background: url(../images/plus_b.png) no-repeat center;
+}
+.ir-sec .img-wrap ul li:hover .more::after{
+    background-image: url(../images/plus_c.png);
+}
+
+
+
+/* press 영역 */
+
+.press-sec{
+    background-color: #fafafa;
+}
+.press-sec .inner{
+    width: 100%;
+    /* max-width: unset; */
+
+    /* 전역 속성 */
+    
+    /* 
+        max-width: inherit;   상속
+        max-width: initial;   초기화
+        max-width: revert;    원래대로 돌리기
+        max-width: unset;     설정 해제 
+    */
+
+}
+.press-sec a{
+    color: var(--title-color);
+}
+.press-sec .title-wrap{
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+
+}
+.press-sec .tabmenu-wrap{}
+.press-sec .tabmenu-wrap ul{
+    display: flex;
+    justify-content: center;
+}
+.press-sec .tabmenu-wrap ul li{
+    width: 150px;
+    border-bottom: solid 2px #ddd;
+    transition: .5s;
+}
+.press-sec .tabmenu-wrap ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.press-sec .tabmenu-wrap ul li:hover{
+    border-color: var(--primary-color);
+}
+.press-sec .tabmenu-wrap ul li:hover a,
+.press-sec .tabmenu-wrap ul li a:active{
+    color: var(--primary-color);
+}
+.press-sec img{
+    width: auto;
+    height: auto;
+}
+.press-sec .sect5_sw .item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.press-list .list a .img {
+    /* position: relative;
+    height: 0;
+    padding-bottom: 60%;
+    overflow: hidden;
+    border-radius: 20px; */
+}
+.press-list .list a .img img {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s; */
+}
+.press-list .list {
+    width: 360px;
+    margin-right: 60px;
+}
+
+.press-list .t_box{}
+.press-list .t_box .t1{
+    color: var(--title-color);
+}
+.press-list .t_box .t2{
+    color: var(--title-color);
+}
+.press-list .t_box .t3{}
+
+
+
+
+
+
+
+
+/* breakpoint 영역 */
+
+@media(max-width: 1280px) {
+    .inner{        
+        max-width: 100%;
+        padding: 0 40px;
+        width: calc(100% - 80px);
+    }
+    .kv-text{
+        max-width: 100%;
+    }
+    .kv-sec{
+        padding: 0;
+    }
+    .title-wrap{
+        text-align: center;
+        width: 100%;
+        padding-top: 0;
+    }
+    .company-sec .title{
+        margin-bottom: 40px;
+    }
+    .company-sec ul{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        border-radius: 20px;
+    }
+    .company-sec ul li{
+        width: 50%;
+    }
+    .company-sec .text-box{
+        display: flex;
+        flex-direction: column;
+        display: block;
+    }
+    .company-sec .text-box::after {
+        bottom: -20px;
+        width: 640px;
+        height: 46px;
+        transform: translateX(-50%);
+    }
+    .company-sec ul li a::before{
+        display: none;
+    }
+   .company-sec ul li a .t_box .t2 {
+        display: none;
+    }
+   .company-sec ul li a .t_box {
+        padding: 30px;
+    }
+    .company-sec ul li a .t_box .t1 {
+        margin-bottom: 0px;
+    }
+    .company-sec ul li a .more{
+        display: none;
+    }
+    .business-sec{}
+    .cont-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: block;
+    }
+    .business-sec .desc br {
+        display: none;
+    }
+    .img-wrap ul{
+        gap: 0 20px;
+        width: 640px;
+        width: 100%;
+        margin: 0px auto;
+    }
+    .img-wrap ul li{
+        width: calc(50% - 10px);
+    }
+    .business-sec .img-wrap ul li a .t2,
+    .business-sec .img-wrap ul li a .t_box .more{
+        display: none;
+    }
+    .business-sec .title{
+        font-size: 60px;
+    }
+    .business-sec::after{
+        display: none;
+    }
+    .ir-sec .img-wrap ul{
+        width: 100%;
+        gap: 20px;
+    }
+
+    
+}
+
+@media(max-width: 767px) {
+    .inner{
+        padding: 0 20px;
+        width: calc(100% - 40px);
+    }
+    .kv-sec{
+        height: 570px;
+    }
+    .kv-subtitle{
+        font-size: 18px;
+    }
+    .kv-title{
+        font-size: 34px;
+        margin: 15px 0px 25px;
+    }
+    .kv-desc{
+        font-size: 16px;
+    }
+    .paging-box{
+        margin-top: 70px;
+    }
+    .subtitle{
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .title{
+        font-size: 24px;
+    }
+    .desc{
+    font-size: 14px;
+        margin-top: 20px;
+    }
+    section {
+        padding: 75px 0;
+    }
+    .t_box .t1 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .text-box{
+        padding-bottom: 50px;
+    }
+    .company-sec .text-box::after{
+        bottom: -5px;
+        width: 280px;
+        height: 20px;
+    }
+    .company-sec ul li a .t_box {
+        padding: 20px;
+    }
+    .business-sec .title{
+        font-size: 30px;
+    }
+    .business-sec .img-wrap ul li a .t_box{
+        padding: 20px;
+    }
+    .img-wrap ul {
+        gap: 10px;
+    }
+    .img-wrap ul li {
+        width: calc(50% - 5px);
+        border-radius: 10px 10px 30px 10px;
+    }
+    .ir-sec{
+        padding: 75px 0 175px;
+    }
+    .ir-sec .img-wrap ul{
+        gap: 10px;
+    }
+    .ir-sec .img-wrap ul li{
+        border-radius: 10px 0;
+    }
+    .ir-sec .t_box .t1{
+        margin: 0;
+        font-size: 16px;
+    }
+    .ir-sec .t_box .t2{
+        display: none;
+    }
+    .ir-sec .t_box .more{
+        display: none;
+    }
+    .ir-sec .img-wrap ul li a img{
+        display: block;
+        width: 30px;
+        margin: 0px auto 10px;
+    }
+    .ir-sec .img-wrap ul li a{
+        background-image: none;
+        padding: 30px 10px;
+        text-align: center;
+    }
+
+}
